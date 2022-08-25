@@ -1,0 +1,10 @@
+<Inner
+  {{! @glint-expect-error Why is there no glint error here? }}
+  @onFoo={{this.handleFoo}}
+  {{!
+    @glint-expect-error
+    This errors as expected:
+    Type 'string | null' is not assignable to type 'string'.
+  }}
+  @bar={{this.bar}}
+/>
